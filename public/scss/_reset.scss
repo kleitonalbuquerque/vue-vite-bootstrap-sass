@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$green-color: #008000;
+$yellow-color: #ffff00;
+
+body {
+  background-color: $yellow-color !important;
+  box-sizing: border-box;
+}
+
+$breakpoint-sm: 540px;
+$breakpoint-md: 720px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1140px;
+$breakpoint-xxl: 1320px;
+
+$container-max-widths: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl
+);

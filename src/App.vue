@@ -1,47 +1,45 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div>
+    <div>
+      <NavBar />
     </div>
-  </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <div class="container d-flex col-xs-12">
+      <div class="row gy-2">
+        <div>
+          <BannerGrid />
+        </div>
+        <div>
+          <Modal />
+        </div>
+        <div class="row gy-2 justify-content-center mb-3">
+          <div class="col">
+            <Card />
+          </div>
+          <div class="col">
+            <Card />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup>
+import BannerGrid from "./components/BannerGrid.vue";
+import Modal from "./components/Modal.vue";
+import Card from "./components/Card.vue";
+import NavBar from "./components/NavBar.vue";
+</script>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+<style lang="scss">
+@import "../public/scss/_reset.scss";
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+h1 {
+  color: green;
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  &:hover {
+    color: greenyellow;
   }
 }
 </style>
